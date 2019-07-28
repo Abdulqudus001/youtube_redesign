@@ -1,4 +1,5 @@
 @import "./colors.scss";
+@import "./mixins.scss";
 
 body{
   font-family: 'Muli', sans-serif;
@@ -10,10 +11,15 @@ body{
 
 .navbar {
   display: flex;
+  position: fixed;
   height: 55px;
   justify-content: space-between;
   padding: 0 10px;
   align-items: center;
+  width: calc(100% - 20px);
+  z-index: 1;
+  background: #fff;
+  top: 0;
 
   .navbar_left {
     flex: 0 0 50%;
@@ -26,6 +32,7 @@ body{
       height: 30px;
       img {
         width: 30px;
+        border-radius: 20px;
       }
     }
   }
@@ -38,6 +45,23 @@ body{
     .desktop {
       display: none;
     }
+
+    @include md() {
+      .search.desktop {
+        display: block;
+        width: 320px;
+        margin: 0 10px;
+      }
+
+      .mobile-search {
+        display: none;
+      }
+
+      & {
+        flex: 0 0 5%;
+        padding: 0;
+      }
+    }
   }
 
 
@@ -48,19 +72,20 @@ body{
     padding: 15px;
     background-image: linear-gradient(rgba($light_grey, 0.3),rgba($light_grey, 0.3)),url('../assets/icons/search.svg'); 
     background-repeat: no-repeat;
-    background-position: 98%;
+    background-position: 97%;
     outline: none;
     border: none;
   }
 }
 
 .videos {
-  width: 300px;
-  max-width: 100%;
+  width: 960px;
+  max-width: calc(100% - 20px);
   margin: 5px auto 65px;
+  padding: 60px 10px 0;
 
   .video {
-    width: 250px;
+    width: 300px;
     max-width: 100%;
     margin: 15px auto;
 
@@ -70,6 +95,7 @@ body{
 
       img {
         border-radius: 12px;
+        width: 100%;
       }
 
       div {
@@ -105,7 +131,6 @@ body{
       }
 
       &__one {
-        flex: 0 0 55%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -113,8 +138,18 @@ body{
         div {
           width: 2px;
           height: 2px;
+          margin: 0 4px;
           background: $video_color;
         }
+      }
+    }
+
+    @include md() {
+      display: flex;
+      width: 100%;
+
+      &__thumbnail {
+        margin: 0 20px;
       }
     }
   }
@@ -152,3 +187,4 @@ body{
     }
   }
 }
+

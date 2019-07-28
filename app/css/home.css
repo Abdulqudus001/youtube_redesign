@@ -7,10 +7,15 @@ body {
 
 .navbar {
   display: flex;
+  position: fixed;
   height: 55px;
   justify-content: space-between;
   padding: 0 10px;
-  align-items: center; }
+  align-items: center;
+  width: calc(100% - 20px);
+  z-index: 1;
+  background: #fff;
+  top: 0; }
   .navbar .navbar_left {
     flex: 0 0 50%; }
   .navbar .navbar_right {
@@ -20,13 +25,24 @@ body {
       width: 30px;
       height: 30px; }
       .navbar .navbar_right .user-profile img {
-        width: 30px; }
+        width: 30px;
+        border-radius: 20px; }
   .navbar .navbar_right, .navbar .navbar_left {
     display: flex;
     justify-content: space-between;
     align-items: center; }
     .navbar .navbar_right .desktop, .navbar .navbar_left .desktop {
       display: none; }
+    @media screen and (min-width: 600px) {
+      .navbar .navbar_right .search.desktop, .navbar .navbar_left .search.desktop {
+        display: block;
+        width: 320px;
+        margin: 0 10px; }
+      .navbar .navbar_right .mobile-search, .navbar .navbar_left .mobile-search {
+        display: none; }
+      .navbar .navbar_right, .navbar .navbar_left {
+        flex: 0 0 5%;
+        padding: 0; } }
   .navbar .search {
     border-radius: 22px;
     width: 500px;
@@ -34,23 +50,25 @@ body {
     padding: 15px;
     background-image: linear-gradient(rgba(235, 235, 235, 0.3), rgba(235, 235, 235, 0.3)), url("../assets/icons/search.svg");
     background-repeat: no-repeat;
-    background-position: 98%;
+    background-position: 97%;
     outline: none;
     border: none; }
 
 .videos {
-  width: 300px;
-  max-width: 100%;
-  margin: 5px auto 65px; }
+  width: 960px;
+  max-width: calc(100% - 20px);
+  margin: 5px auto 65px;
+  padding: 60px 10px 0; }
   .videos .video {
-    width: 250px;
+    width: 300px;
     max-width: 100%;
     margin: 15px auto; }
     .videos .video__thumbnail {
       border-radius: 12px;
       position: relative; }
       .videos .video__thumbnail img {
-        border-radius: 12px; }
+        border-radius: 12px;
+        width: 100%; }
       .videos .video__thumbnail div {
         width: 47px;
         height: 24px;
@@ -76,14 +94,20 @@ body {
       .videos .video__details p {
         margin: 0; }
       .videos .video__details__one {
-        flex: 0 0 55%;
         display: flex;
         align-items: center;
         justify-content: space-between; }
         .videos .video__details__one div {
           width: 2px;
           height: 2px;
+          margin: 0 4px;
           background: #c2c2c2; }
+    @media screen and (min-width: 600px) {
+      .videos .video {
+        display: flex;
+        width: 100%; }
+        .videos .video__thumbnail {
+          margin: 0 20px; } }
 
 .footer {
   position: fixed;
