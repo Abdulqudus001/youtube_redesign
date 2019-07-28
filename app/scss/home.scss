@@ -1,7 +1,83 @@
-$main: red;
+@import "./colors.scss";
+
 body{
   background: $main;
   color: #fff;
   margin: 0;
   padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+
+  .navbar_left {
+    flex: 0 0 50%;
+  }
+  .navbar_right {
+    flex: 0 0 20%;
+    padding: 0 10px;
+    .user-profile {
+      width: 30px;
+      height: 30px;
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  .navbar_right, .navbar_left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .desktop {
+      display: none;
+    }
+  }
+
+
+  .search {
+    border-radius: 22px;
+    width: 500px;
+    max-width: 100%;
+    padding: 15px;
+    background-image: linear-gradient(rgba($light_grey, 0.3),rgba($light_grey, 0.3)),url('../assets/icons/search.svg'); 
+    background-repeat: no-repeat;
+    background-position: 98%;
+    outline: none;
+    border: none;
+  }
+}
+
+.footer {
+  position: fixed;
+  border-top: 1px solid #f1f1f1;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  &__item {
+    display: flex;
+    flex-direction: column;
+    color: $text;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+    p {
+      margin: 1px
+    }
+
+    &:first-child {
+      color: red;
+    }
+  }
 }
