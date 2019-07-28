@@ -1,0 +1,31 @@
+{
+  "name": "youtube_redesign",
+  "version": "1.0.0",
+  "description": "A simple redesign on youtube gotten from craftwork.design",
+  "main": "index.js",
+  "scripts": {
+    "serve": "live-server --open=./app --port=3000 --no-css-inject --ignore=./app/scss/**/*.scss",
+    "watch": "gulp watch",
+    "start": "npm-run-all --parallel serve watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdulqudus001/youtube_redesign.git"
+  },
+  "author": "ibn_Abubakre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdulqudus001/youtube_redesign/issues"
+  },
+  "homepage": "https://github.com/Abdulqudus001/youtube_redesign#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "css-loader": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
+  }
+}
