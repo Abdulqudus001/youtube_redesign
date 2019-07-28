@@ -9,6 +9,10 @@ body{
   padding: 0;
 }
 
+p {
+  margin: 0;
+}
+
 .navbar {
   display: flex;
   position: fixed;
@@ -21,8 +25,19 @@ body{
   background: #fff;
   top: 0;
 
+  @include mdl() {
+    padding: 0 30px;
+    width: calc(100% - 60px);
+  }
+
   .navbar_left {
     flex: 0 0 50%;
+    @include mdl() {
+      img.desktop {
+        display: block;  
+        margin-right: 40px;
+      }
+    }
   }
   .navbar_right {
     flex: 0 0 20%;
@@ -75,6 +90,86 @@ body{
     background-position: 97%;
     outline: none;
     border: none;
+    @include md() {
+      padding: 10px;
+    }
+  }
+}
+
+.navbar-fixed {
+  width: 220px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: 2;
+
+  .topnav {
+    padding: 0 20px;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+    
+    img {
+      width: 70px;
+    }
+
+    img.desktop {
+      margin-right: 15px;
+      width: 20px;
+    }
+  }
+
+  section {
+    margin: 10px 0;
+  }
+
+  &__item {
+    display: flex;
+    color: $text;
+    padding: 0 20px;
+    font-size: 10px;
+    align-items: center;
+    height: 20px;
+    
+    p {
+      margin-top: 3px;
+    }
+
+    img {
+      margin-right: 15px;
+      width: 12px;
+    }
+
+    &.home {
+      color: red;
+    }
+  }
+}
+
+.side-nav {
+  top: -10px;
+  margin-top: 60px;
+  width: 70px;
+  height: calc(100vh - 60px);
+  background: #fff;
+  border-right: 1px solid #f1f1f1;
+  position: fixed;
+  left: 0;
+  display: none;
+  flex-direction: column;
+
+  div:not(.footer__item) {
+    flex: 0 0 60%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  @include mdl() {
+    display: flex;
   }
 }
 
@@ -83,6 +178,7 @@ body{
   max-width: calc(100% - 20px);
   margin: 5px auto 65px;
   padding: 60px 10px 0;
+  position: relative;
 
   .video {
     width: 300px;
@@ -152,6 +248,11 @@ body{
         margin: 0 20px;
       }
     }
+
+    @include mdl() {
+      margin-left: 60px;
+      width: calc(100% - 60px);
+    }
   }
 }
 
@@ -185,6 +286,10 @@ body{
     &:first-child {
       color: red;
     }
+  }
+
+  @include mdl() {
+    display: none;
   }
 }
 

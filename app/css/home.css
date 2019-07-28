@@ -5,6 +5,9 @@ body {
   margin: 0;
   padding: 0; }
 
+p {
+  margin: 0; }
+
 .navbar {
   display: flex;
   position: fixed;
@@ -16,8 +19,16 @@ body {
   z-index: 1;
   background: #fff;
   top: 0; }
+  @media screen and (min-width: 650px) {
+    .navbar {
+      padding: 0 30px;
+      width: calc(100% - 60px); } }
   .navbar .navbar_left {
     flex: 0 0 50%; }
+    @media screen and (min-width: 650px) {
+      .navbar .navbar_left img.desktop {
+        display: block;
+        margin-right: 40px; } }
   .navbar .navbar_right {
     flex: 0 0 20%;
     padding: 0 10px; }
@@ -53,12 +64,72 @@ body {
     background-position: 97%;
     outline: none;
     border: none; }
+    @media screen and (min-width: 600px) {
+      .navbar .search {
+        padding: 10px; } }
+
+.navbar-fixed {
+  width: 220px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: 2; }
+  .navbar-fixed .topnav {
+    padding: 0 20px;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1; }
+    .navbar-fixed .topnav img {
+      width: 70px; }
+    .navbar-fixed .topnav img.desktop {
+      margin-right: 15px;
+      width: 20px; }
+  .navbar-fixed section {
+    margin: 10px 0; }
+  .navbar-fixed__item {
+    display: flex;
+    color: #898989;
+    padding: 0 20px;
+    font-size: 10px;
+    align-items: center;
+    height: 20px; }
+    .navbar-fixed__item p {
+      margin-top: 3px; }
+    .navbar-fixed__item img {
+      margin-right: 15px;
+      width: 12px; }
+    .navbar-fixed__item.home {
+      color: red; }
+
+.side-nav {
+  top: -10px;
+  margin-top: 60px;
+  width: 70px;
+  height: calc(100vh - 60px);
+  background: #fff;
+  border-right: 1px solid #f1f1f1;
+  position: fixed;
+  left: 0;
+  display: none;
+  flex-direction: column; }
+  .side-nav div:not(.footer__item) {
+    flex: 0 0 60%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column; }
+  @media screen and (min-width: 650px) {
+    .side-nav {
+      display: flex; } }
 
 .videos {
   width: 960px;
   max-width: calc(100% - 20px);
   margin: 5px auto 65px;
-  padding: 60px 10px 0; }
+  padding: 60px 10px 0;
+  position: relative; }
   .videos .video {
     width: 300px;
     max-width: 100%;
@@ -108,6 +179,10 @@ body {
         width: 100%; }
         .videos .video__thumbnail {
           margin: 0 20px; } }
+    @media screen and (min-width: 650px) {
+      .videos .video {
+        margin-left: 60px;
+        width: calc(100% - 60px); } }
 
 .footer {
   position: fixed;
@@ -134,3 +209,6 @@ body {
       margin: 1px; }
     .footer__item:first-child {
       color: red; }
+  @media screen and (min-width: 650px) {
+    .footer {
+      display: none; } }
