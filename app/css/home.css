@@ -7,8 +7,9 @@ body {
 
 .navbar {
   display: flex;
+  height: 55px;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0 10px;
   align-items: center; }
   .navbar .navbar_left {
     flex: 0 0 50%; }
@@ -37,6 +38,53 @@ body {
     outline: none;
     border: none; }
 
+.videos {
+  width: 300px;
+  max-width: 100%;
+  margin: 5px auto 65px; }
+  .videos .video {
+    width: 250px;
+    max-width: 100%;
+    margin: 15px auto; }
+    .videos .video__thumbnail {
+      border-radius: 12px;
+      position: relative; }
+      .videos .video__thumbnail img {
+        border-radius: 12px; }
+      .videos .video__thumbnail div {
+        width: 47px;
+        height: 24px;
+        border-radius: 12px;
+        background: #000;
+        opacity: 0.3;
+        position: absolute;
+        bottom: 15px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+    .videos .video__name {
+      color: #19202c;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 6px 0; }
+    .videos .video__details {
+      display: flex;
+      color: #c2c2c2;
+      justify-content: space-between;
+      font-size: 13px; }
+      .videos .video__details p {
+        margin: 0; }
+      .videos .video__details__one {
+        flex: 0 0 55%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .videos .video__details__one div {
+          width: 2px;
+          height: 2px;
+          background: #c2c2c2; }
+
 .footer {
   position: fixed;
   border-top: 1px solid #f1f1f1;
@@ -45,7 +93,9 @@ body {
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  background: #fff;
+  z-index: 1; }
   .footer__item {
     display: flex;
     flex-direction: column;
@@ -53,9 +103,10 @@ body {
     align-items: center;
     justify-content: center; }
     .footer__item img {
-      width: 25px;
-      height: 25px; }
+      width: 20px;
+      height: 20px; }
     .footer__item p {
+      font-size: 10px;
       margin: 1px; }
     .footer__item:first-child {
       color: red; }

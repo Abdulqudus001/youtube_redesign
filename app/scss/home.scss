@@ -10,8 +10,9 @@ body{
 
 .navbar {
   display: flex;
+  height: 55px;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0 10px;
   align-items: center;
 
   .navbar_left {
@@ -53,6 +54,72 @@ body{
   }
 }
 
+.videos {
+  width: 300px;
+  max-width: 100%;
+  margin: 5px auto 65px;
+
+  .video {
+    width: 250px;
+    max-width: 100%;
+    margin: 15px auto;
+
+    &__thumbnail {
+      border-radius: 12px;
+      position: relative;
+
+      img {
+        border-radius: 12px;
+      }
+
+      div {
+        width: 47px;
+        height: 24px;
+        border-radius: 12px;
+        background: #000;
+        opacity: 0.3;
+        position: absolute;
+        bottom: 15px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &__name {
+      color: $video_name;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 6px 0;
+    }
+
+    &__details {
+      display: flex;
+      color: $video_color;
+      justify-content: space-between;
+      font-size: 13px;
+
+      p {
+        margin: 0;
+      }
+
+      &__one {
+        flex: 0 0 55%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+          width: 2px;
+          height: 2px;
+          background: $video_color;
+        }
+      }
+    }
+  }
+}
+
 .footer {
   position: fixed;
   border-top: 1px solid #f1f1f1;
@@ -62,6 +129,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  background: #fff;
+  z-index: 1;
   
   &__item {
     display: flex;
@@ -70,10 +139,11 @@ body{
     align-items: center;
     justify-content: center;
     img {
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
     }
     p {
+      font-size: 10px;
       margin: 1px
     }
 
