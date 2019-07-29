@@ -97,20 +97,26 @@ p {
 }
 
 .navbar-fixed {
-  width: 220px;
+  width: 0px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   background: #fff;
   z-index: 2;
+  overflow: auto;
+  transition: 0.2s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   .topnav {
     padding: 0 20px;
-    display: flex;
-    height: 60px;
+    display: none;
+    height: 55px;
     align-items: center;
     border-bottom: 1px solid #f1f1f1;
+    position: fixed;
+    width: 180px;
+    z-index: 3;
+    background: #fff;
     
     img {
       width: 70px;
@@ -122,17 +128,42 @@ p {
     }
   }
 
+  .bottomNav {
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    width: 220px;
+    display: none;
+    background: #fff;
+    border-top: 1px solid #f1f1f1;
+    align-items: center;
+  }
+
   section {
     margin: 10px 0;
+    .section__title {
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 0 20px;
+      margin: 8px 0;
+    }
+
+    &.first {
+      margin-top: 70px;
+    }
+    &.last {
+      margin-bottom: 50px;
+    }
   }
 
   &__item {
     display: flex;
     color: $text;
     padding: 0 20px;
-    font-size: 10px;
+    font-size: 12px;
     align-items: center;
-    height: 20px;
+    height: 25px;
     
     p {
       margin-top: 3px;
@@ -147,13 +178,14 @@ p {
       color: red;
     }
   }
+
 }
 
 .side-nav {
   top: -10px;
   margin-top: 60px;
   width: 70px;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 45px);
   background: #fff;
   border-right: 1px solid #f1f1f1;
   position: fixed;
@@ -221,7 +253,9 @@ p {
       color: $video_color;
       justify-content: space-between;
       font-size: 13px;
-
+      @include mdl() {
+        display: block;
+      }
       p {
         margin: 0;
       }
@@ -230,6 +264,9 @@ p {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include mdl() {
+          width: fit-content;
+        }
 
         div {
           width: 2px;

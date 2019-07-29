@@ -11,7 +11,7 @@
 <body>
   <div class="navbar">
     <div class="navbar_left">
-      <img class="desktop" src="./assets/icons/toggle.svg" alt="Toggle navbar">
+      <img onclick="showSideNav()" class="desktop" id="toggle" src="./assets/icons/toggle.svg" alt="Toggle navbar">
       <img src="./assets/icons/main-logo.svg" alt="YouTube logo">
       <input type="text" name="search" id="search" placeholder="Search" class="search desktop">
     </div>
@@ -26,12 +26,12 @@
     </div>
   </div>
 
-  <div class="navbar-fixed">
-    <div class="topnav">
-      <img class="desktop" src="./assets/icons/toggle.svg" alt="Toggle navbar">
+  <div id="navbar-fixed" class="navbar-fixed">
+    <div id="topnav" class="topnav">
+      <img onclick="hideSideNav()" class="desktop" src="./assets/icons/toggle.svg" alt="Toggle navbar">
       <img src="./assets/icons/main-logo.svg" alt="YouTube logo">
     </div>
-    <section>
+    <section class="first">
       <div class="navbar-fixed__item home">
         <img src="./assets/icons/home.svg" alt="Home">
         <p>Home</p>
@@ -79,6 +79,39 @@
         <p>Show More</p>
       </div>
     </section>
+    <section class="last">
+      <p class="section__title">Subscriptions</p>
+      <div class="navbar-fixed__item">
+        <img src="./assets/images/users/Oval.jpg" alt="User-DP">
+        <p>Gussie Singleton</p>
+      </div>
+      <div class="navbar-fixed__item">
+        <img src="./assets/images/users/Oval1.jpg" alt="User-DP">
+        <p>Nora Francis</p>
+      </div>
+      <div class="navbar-fixed__item">
+        <img src="./assets/images/users/Oval2.jpg" alt="User-DP">
+        <p>Belle Briggs</p>
+      </div>
+      <div class="navbar-fixed__item">
+        <img src="./assets/images/users/Oval3.jpg" alt="User-DP">
+        <p>Eunice Cortez</p>
+      </div>
+      <div class="navbar-fixed__item">
+        <img src="./assets/images/users/Oval4.jpg" alt="User-DP">
+        <p>Emma Hanson</p>
+      </div>
+      <div class="navbar-fixed__item">
+        <img src="./assets/images/users/Oval5.jpg" alt="User-DP">
+        <p>Leah Berry</p>
+      </div>
+    </section>
+    <div id="bottomNav" class="bottomNav">
+      <div class="navbar-fixed__item">
+        <img src="./assets/icons/settings.svg" alt="Settings">
+        <p>Settings</p>
+      </div>
+    </div>
   </div>
 
   <div class="videos">
@@ -207,5 +240,6 @@
       <p>Library</p>
     </div>
   </div>
+  <script src="./scripts/index.js"></script>
 </body>
 </html>
