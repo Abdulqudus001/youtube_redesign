@@ -70,12 +70,15 @@ const disableDarkMode = () => {
   dq('#navbar').style.background = '#fff';
   dq('#footer').style.background = '#fff';
   dq('#main-logo').src = icon['mainLogo'];
-  dq('#footer-trending').src = icon['trending'];
-  dq('#footer-sub').src = icon['subscriptions'];
-  dq('#footer-library').src = icon['library'];
-  dq('#side-trending').src = icon['trending'];
-  dq('#side-lib').src = icon['library'];
-  dq('#side-sub').src = icon['subscriptions'];
+  trending.forEach(trend => {
+    trend.src = icon['trending'];
+  });
+  lib.forEach(library => {
+    library.src = icon['library'];
+  });
+  sub.forEach(subscription => {
+    subscription.src = icon['subscriptions'];
+  });
   dq('#mobile-search').src = './assets/icons/search.svg';
   videoName.forEach(video => {
     video.style.color = '#19202c';
@@ -87,7 +90,7 @@ const disableDarkMode = () => {
   // Navbar fixed section items
   dq('#history').src = './assets/icons/history.svg';
   dq('#w-later').src = './assets/icons/watch-later.svg';
-  dq('#favourite').src = './assets/icons/favourites.svg';
+  dq('#favourite').src = './assets/icons/favourite.svg';
   dq('#l-videos').src = './assets/icons/liked-videos.svg';
   dq('#music').src = './assets/icons/music.svg';
   dq('#games').src = './assets/icons/games.svg';
@@ -98,5 +101,5 @@ const disableDarkMode = () => {
   dq('#section-title').style.color = '#000';
   dq('#toggle').src = icon['toggle'];
   dq('#search').classList.remove('dark');
-  dq('sidenav').style.background = '#fff';
+  dq('#sidenav').style.background = '#fff';
 }
