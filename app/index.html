@@ -9,18 +9,22 @@
   <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
-  <div class="navbar">
+  <div class="navbar" id="navbar">
     <div class="navbar_left">
-      <img onclick="showSideNav()" class="desktop" id="toggle" src="./assets/icons/toggle.svg" alt="Toggle navbar">
-      <img src="./assets/icons/main-logo.svg" alt="YouTube logo">
+      <img onclick="showSideNav('left')" class="desktop" id="toggle" src="./assets/icons/toggle.svg" alt="Toggle navbar">
+      <img id="main-logo" src="./assets/icons/main-logo.svg" alt="YouTube logo">
       <input type="text" name="search" id="search" placeholder="Search" class="search desktop">
     </div>
     <div class="navbar_right">
       <img class="desktop" src="./assets/icons/camcorder.svg" alt="">
       <img class="desktop" src="./assets/icons/grid.svg" alt="Change view">
       <img class="desktop" src="./assets/icons/notification.svg" alt="">
-      <img class="mobile-search" src="./assets/icons/search.svg" alt="Search videos">
-      <div class="user-profile">
+      <label class="switch">
+        <input id="slider" type="checkbox">
+        <span class="slider"></span>
+      </label>
+      <img id="mobile-search" class="mobile-search" src="./assets/icons/search.svg" alt="Search videos">
+      <div onclick="showSideNav('right')" class="user-profile">
         <img src="./assets/images/user-profile.jpg" alt="Profile image">
       </div>    
     </div>
@@ -28,8 +32,8 @@
 
   <div id="navbar-fixed" class="navbar-fixed">
     <div id="topnav" class="topnav">
-      <img onclick="hideSideNav()" class="desktop" src="./assets/icons/toggle.svg" alt="Toggle navbar">
-      <img src="./assets/icons/main-logo.svg" alt="YouTube logo">
+      <img id="topnav-toggle" onclick="hideSideNav()" class="desktop" src="./assets/icons/toggle.svg" alt="Toggle navbar">
+      <img id="topnav-logo" src="./assets/icons/main-logo.svg" alt="YouTube logo">
     </div>
     <section class="first">
       <div class="navbar-fixed__item home">
@@ -37,50 +41,50 @@
         <p>Home</p>
       </div>
       <div class="navbar-fixed__item">
-        <img src="./assets/icons/trending.svg" alt="Trending">
+        <img class="trending" src="./assets/icons/trending.svg" alt="Trending">
         <p>Trending</p>
       </div>
       <div class="navbar-fixed__item">
-        <img src="./assets/icons/subscriptions.svg" alt="Subscriptions">
+        <img class="sub" src="./assets/icons/subscriptions.svg" alt="Subscriptions">
         <p>Subscriptions</p>
       </div>
     </section>
     <section>
       <div class="navbar-fixed__item">
-        <img src="./assets/icons/library.svg" alt="Library">
+        <img class="lib" src="./assets/icons/library.svg" alt="Library">
         <p>Library</p>
       </div>
       <div class="navbar-fixed__item">
-        <img src="./assets/icons/history.svg" alt="History">
+        <img id="history" src="./assets/icons/history.svg" alt="History">
         <p>History</p>
       </div>
       <div class="navbar-fixed__item">
-        <img src="./assets/icons/watch-later.svg" alt="Watch Later">
+        <img id="w-later" src="./assets/icons/watch-later.svg" alt="Watch Later">
         <p>Watch Later</p>
       </div>
       <div class="navbar-fixed__item">
-        <img src="./assets/icons/favourite.svg" alt="Favourite">
+        <img id="favourite" src="./assets/icons/favourite.svg" alt="Favourite">
         <p>Favourite</p>
       </div>
       <div class="navbar-fixed__item">
-        <img src="./assets/icons/liked-videos.svg" alt="Liked Videos">
+        <img id="l-videos" src="./assets/icons/liked-videos.svg" alt="Liked Videos">
         <p>Liked Videos</p>
       </div>
       <div class="navbar-fixed__item">
-        <img src="./assets/icons/music.svg" alt="Music">
+        <img id="music" src="./assets/icons/music.svg" alt="Music">
         <p>Music</p>
       </div>
       <div class="navbar-fixed__item">
-        <img src="./assets/icons/games.svg" alt="Games">
+        <img id="games" src="./assets/icons/games.svg" alt="Games">
         <p>Games</p>
       </div>
       <div class="navbar-fixed__item">
-        <img src="./assets/icons/chevron-down.svg" alt="Show More">
+        <img id="more" src="./assets/icons/chevron-down.svg" alt="Show More">
         <p>Show More</p>
       </div>
     </section>
     <section class="last">
-      <p class="section__title">Subscriptions</p>
+      <p id="section-title" class="section__title">Subscriptions</p>
       <div class="navbar-fixed__item">
         <img src="./assets/images/users/Oval.jpg" alt="User-DP">
         <p>Gussie Singleton</p>
@@ -108,138 +112,141 @@
     </section>
     <div id="bottomNav" class="bottomNav">
       <div class="navbar-fixed__item">
-        <img src="./assets/icons/settings.svg" alt="Settings">
+        <img id="settings" src="./assets/icons/settings.svg" alt="Settings">
         <p>Settings</p>
       </div>
     </div>
   </div>
 
   <div class="videos">
-    <div class="side-nav">
+    <div id="sidenav" class="side-nav">
       <div>
         <div class="footer__item">
           <img src="./assets/icons/home.svg" alt="Home">
           <p>Home</p>
         </div>
         <div class="footer__item">
-          <img src="./assets/icons/trending.svg" alt="Trending">
+          <img class="trending" src="./assets/icons/trending.svg" alt="Trending">
           <p>Trending</p>
         </div>
         <div class="footer__item">
-          <img src="./assets/icons/subscriptions.svg" alt="Subscriptions">
+          <img class="sub" src="./assets/icons/subscriptions.svg" alt="Subscriptions">
           <p>Subscriptions</p>
         </div>
         <div class="footer__item">
-          <img src="./assets/icons/library.svg" alt="Library">
+          <img class="lib" src="./assets/icons/library.svg" alt="Library">
           <p>Library</p>
         </div>
       </div>
     </div>
-    <div class="video">
-      <div class="video__thumbnail">
-        <img src="./assets/images/Cover.jpg" alt="video thumbnail">
-        <div>4:15</div>
-      </div>
-      <div>
-        <p class="video__name">A Brief History Of Creation</p>
-        <div class="video__details">
-          <div class="video__details__one">
-            <p class="views">80k views</p>
-            <div class="dot"></div>
-            <p class="published">3 days ago</p>
+    <div class="my-videos">
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover.jpg" alt="video thumbnail">
+          <div>4:15</div>
+        </div>
+        <div>
+          <p class="video__name">A Brief History Of Creation</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">80k views</p>
+              <div class="dot"></div>
+              <p class="published">3 days ago</p>
+            </div>
+            <p class="owner">Dollie Blair</p>
           </div>
-          <p class="owner">Dollie Blair</p>
         </div>
       </div>
-    </div>
-    <div class="video">
-      <div class="video__thumbnail">
-        <img src="./assets/images/Cover1.jpg" alt="video thumbnail">
-        <div>8:00</div>
-      </div>
-      <div>
-        <p class="video__name">Selecting The Right Hotel</p>
-        <div class="video__details">
-          <div class="video__details__one">
-            <p class="views">123k views</p>
-            <div class="dot"></div>
-            <p class="published">1 months ago</p>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover1.jpg" alt="video thumbnail">
+          <div>8:00</div>
+        </div>
+        <div>
+          <p class="video__name">Selecting The Right Hotel</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">123k views</p>
+              <div class="dot"></div>
+              <p class="published">1 months ago</p>
+            </div>
+            <p class="owner">Dollie Blair</p>
           </div>
-          <p class="owner">Dollie Blair</p>
         </div>
       </div>
-    </div>
-    <div class="video">
-      <div class="video__thumbnail">
-        <img src="./assets/images/Cover2.jpg" alt="video thumbnail">
-        <div>5:32</div>
-      </div>
-      <div>
-        <p class="video__name">Asteroids</p>
-        <div class="video__details">
-          <div class="video__details__one">
-            <p class="views">43k views</p>
-            <div class="dot"></div>
-            <p class="published">12 days ago</p>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover2.jpg" alt="video thumbnail">
+          <div>5:32</div>
+        </div>
+        <div>
+          <p class="video__name">Asteroids</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">43k views</p>
+              <div class="dot"></div>
+              <p class="published">12 days ago</p>
+            </div>
+            <p class="owner">Dollie Blair</p>
           </div>
-          <p class="owner">Dollie Blair</p>
         </div>
       </div>
-    </div>
-    <div class="video">
-      <div class="video__thumbnail">
-        <img src="./assets/images/Cover3.jpg" alt="video thumbnail">
-        <div>6:40</div>
-      </div>
-      <div>
-        <p class="video__name">Telescopes 101</p>
-        <div class="video__details">
-          <div class="video__details__one">
-            <p class="views">11k views</p>
-            <div class="dot"></div>
-            <p class="published">3 months ago</p>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover3.jpg" alt="video thumbnail">
+          <div>6:40</div>
+        </div>
+        <div>
+          <p class="video__name">Telescopes 101</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">11k views</p>
+              <div class="dot"></div>
+              <p class="published">3 months ago</p>
+            </div>
+            <p class="owner">Dollie Blair</p>
           </div>
-          <p class="owner">Dollie Blair</p>
         </div>
       </div>
-    </div>
-    <div class="video">
-      <div class="video__thumbnail">
-        <img src="./assets/images/Cover4.jpg" alt="video thumbnail">
-        <div>1:32</div>
-      </div>
-      <div>
-        <p class="video__name">Intro to Javascript</p>
-        <div class="video__details">
-          <div class="video__details__one">
-            <p class="views">80k views</p>
-            <div class="dot"></div>
-            <p class="published">12 hours ago</p>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover4.jpg" alt="video thumbnail">
+          <div>1:32</div>
+        </div>
+        <div>
+          <p class="video__name">Intro to Javascript</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">80k views</p>
+              <div class="dot"></div>
+              <p class="published">12 hours ago</p>
+            </div>
+            <p class="owner">ibn_Abubakre</p>
           </div>
-          <p class="owner">ibn_Abubakre</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="footer">
+  <div id="footer" class="footer">
     <div class="footer__item">
-      <img src="./assets/icons/home.svg" alt="Home">
+      <img id="footer-home" src="./assets/icons/home.svg" alt="Home">
       <p>Home</p>
     </div>
     <div class="footer__item">
-      <img src="./assets/icons/trending.svg" alt="Trending">
+      <img class="trending" src="./assets/icons/trending.svg" alt="Trending">
       <p>Trending</p>
     </div>
     <div class="footer__item">
-      <img src="./assets/icons/subscriptions.svg" alt="Subscriptions">
+      <img class="sub" src="./assets/icons/subscriptions.svg" alt="Subscriptions">
       <p>Subscriptions</p>
     </div>
     <div class="footer__item">
-      <img src="./assets/icons/library.svg" alt="Library">
+      <img class="lib" src="./assets/icons/library.svg" alt="Library">
       <p>Library</p>
     </div>
   </div>
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/theme.js"></script>
 </body>
 </html>

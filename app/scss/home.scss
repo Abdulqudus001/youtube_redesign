@@ -1,5 +1,8 @@
 @import "./colors.scss";
 @import "./mixins.scss";
+@import "./components/slider.scss";
+
+
 
 body{
   font-family: 'Muli', sans-serif;
@@ -7,6 +10,10 @@ body{
   color: #fff;
   margin: 0;
   padding: 0;
+}
+
+body, .navbar, .footer {
+  transition: .4s;
 }
 
 p {
@@ -45,6 +52,7 @@ p {
     .user-profile {
       width: 30px;
       height: 30px;
+      margin: 0 5px;
       img {
         width: 30px;
         border-radius: 20px;
@@ -92,6 +100,13 @@ p {
     border: none;
     @include md() {
       padding: 10px;
+    }
+    &.dark {
+      background-image: url('../assets/icons/white/search-white.svg');
+      background-color: rgba(255, 255, 255, 0.1);
+      &::placeholder {
+        color: rgba(#fff, 0.4);
+      }
     }
   }
 }
@@ -172,6 +187,7 @@ p {
     img {
       margin-right: 15px;
       width: 12px;
+      border-radius: 17px;
     }
 
     &.home {
@@ -212,6 +228,14 @@ p {
   padding: 60px 10px 0;
   position: relative;
 
+  .my-videos {
+    display: flex;
+    flex-flow: row wrap;
+    @include lg() {
+      padding-left: 55px;
+    }
+  }
+
   .video {
     width: 300px;
     max-width: 100%;
@@ -222,7 +246,7 @@ p {
       position: relative;
 
       img {
-        border-radius: 12px;
+        border-radius: 17px;
         width: 100%;
       }
 
@@ -289,6 +313,19 @@ p {
     @include mdl() {
       margin-left: 60px;
       width: calc(100% - 60px);
+    }
+
+    @include lg() {
+      width: 280px;
+      display: block;
+      margin: 10px;
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+
+      &__thumbnail {
+        margin: 0;
+      }
     }
   }
 }

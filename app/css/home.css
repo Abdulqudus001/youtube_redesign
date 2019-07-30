@@ -1,9 +1,49 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  margin: 0 5px; }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+    .switch input:checked + .slider {
+      background: #2196F3; }
+    .switch input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3; }
+    .switch input:checked + .slider:before {
+      transform: translateX(20px); }
+  .switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    transition: .4s;
+    border-radius: 24px; }
+    .switch .slider:before {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #fff;
+      transition: .4s;
+      left: 4px;
+      bottom: 3px;
+      content: ""; }
+
 body {
   font-family: 'Muli', sans-serif;
   background: #ffffff;
   color: #fff;
   margin: 0;
   padding: 0; }
+
+body, .navbar, .footer {
+  transition: .4s; }
 
 p {
   margin: 0; }
@@ -34,7 +74,8 @@ p {
     padding: 0 10px; }
     .navbar .navbar_right .user-profile {
       width: 30px;
-      height: 30px; }
+      height: 30px;
+      margin: 0 5px; }
       .navbar .navbar_right .user-profile img {
         width: 30px;
         border-radius: 20px; }
@@ -67,6 +108,11 @@ p {
     @media screen and (min-width: 600px) {
       .navbar .search {
         padding: 10px; } }
+    .navbar .search.dark {
+      background-image: url("../assets/icons/white/search-white.svg");
+      background-color: rgba(255, 255, 255, 0.1); }
+      .navbar .search.dark::placeholder {
+        color: rgba(255, 255, 255, 0.4); }
 
 .navbar-fixed {
   width: 0px;
@@ -125,7 +171,8 @@ p {
       margin-top: 3px; }
     .navbar-fixed__item img {
       margin-right: 15px;
-      width: 12px; }
+      width: 12px;
+      border-radius: 17px; }
     .navbar-fixed__item.home {
       color: red; }
 
@@ -155,6 +202,12 @@ p {
   margin: 5px auto 65px;
   padding: 60px 10px 0;
   position: relative; }
+  .videos .my-videos {
+    display: flex;
+    flex-flow: row wrap; }
+    @media screen and (min-width: 750px) {
+      .videos .my-videos {
+        padding-left: 55px; } }
   .videos .video {
     width: 300px;
     max-width: 100%;
@@ -163,7 +216,7 @@ p {
       border-radius: 12px;
       position: relative; }
       .videos .video__thumbnail img {
-        border-radius: 12px;
+        border-radius: 17px;
         width: 100%; }
       .videos .video__thumbnail div {
         width: 47px;
@@ -214,6 +267,16 @@ p {
       .videos .video {
         margin-left: 60px;
         width: calc(100% - 60px); } }
+    @media screen and (min-width: 750px) {
+      .videos .video {
+        width: 280px;
+        display: block;
+        margin: 10px;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column; }
+        .videos .video__thumbnail {
+          margin: 0; } }
 
 .footer {
   position: fixed;
