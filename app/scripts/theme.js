@@ -25,10 +25,13 @@ let videoName = document.querySelectorAll('.video__name');
 let trending = document.querySelectorAll('.trending');
 let lib = document.querySelectorAll('.lib');
 let sub = document.querySelectorAll('.sub');
+let group = document.querySelectorAll('.group');
+let nrDesktop = document.querySelectorAll('.nr-desktop');
 
 const enableDarkMode = () => {
   dq('body').style.background = '#17171e';
   dq('#navbar').style.background = '#17171e';
+  dq('#navbar').style.boxShadow = '0 1px 7px 0 rgba(255, 255, 255, 0.4)'
   dq('#footer').style.background = '#17171e';
   dq('#main-logo').src = whiteIcon['mainLogo'];
   trending.forEach(trend => {
@@ -39,6 +42,12 @@ const enableDarkMode = () => {
   });
   sub.forEach(subscription => {
     subscription.src = whiteIcon['subscriptions'];
+  });
+  group.forEach(group => {
+    group.style.color = '#fff';
+  });
+  nrDesktop.forEach(icon => {
+    icon.src = `./assets/icons/white/${icon.id}.svg`;
   });
   dq('#mobile-search').src = './assets/icons/white/search-white.svg';
   videoName.forEach(video => {
@@ -68,6 +77,7 @@ const enableDarkMode = () => {
 const disableDarkMode = () => {
   dq('body').style.background = '#fff';
   dq('#navbar').style.background = '#fff';
+  dq('#navbar').style.background = '0 1px 7px 0 rgba(0, 0, 0, 0.4)'
   dq('#footer').style.background = '#fff';
   dq('#main-logo').src = icon['mainLogo'];
   trending.forEach(trend => {
@@ -82,6 +92,12 @@ const disableDarkMode = () => {
   dq('#mobile-search').src = './assets/icons/search.svg';
   videoName.forEach(video => {
     video.style.color = '#19202c';
+  });
+  group.forEach(group => {
+    group.style.color = '#000';
+  });
+  nrDesktop.forEach(icon => {
+    icon.src = `./assets/icons/${icon.id}.svg`
   });
   dq('#navbar-fixed').style.background = '#fff';
   dq('#topnav').style.background = '#fff';

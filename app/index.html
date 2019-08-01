@@ -11,14 +11,14 @@
 <body>
   <div class="navbar" id="navbar">
     <div class="navbar_left">
-      <img onclick="showSideNav('left')" class="desktop" id="toggle" src="./assets/icons/toggle.svg" alt="Toggle navbar">
+      <img onclick="showSideNav('left')" class="toggle desktop" id="toggle" src="./assets/icons/toggle.svg" alt="Toggle navbar">
       <img id="main-logo" src="./assets/icons/main-logo.svg" alt="YouTube logo">
       <input type="text" name="search" id="search" placeholder="Search" class="search desktop">
     </div>
     <div class="navbar_right">
-      <img class="desktop" src="./assets/icons/camcorder.svg" alt="">
-      <img class="desktop" src="./assets/icons/grid.svg" alt="Change view">
-      <img class="desktop" src="./assets/icons/notification.svg" alt="">
+      <img id="camcorder" class="nr-desktop desktop" src="./assets/icons/camcorder.svg" alt="">
+      <img id="grid" class="nr-desktop desktop" src="./assets/icons/grid.svg" alt="Change view">
+      <img id="notification" class="nr-desktop desktop" src="./assets/icons/notification.svg" alt="">
       <label class="switch">
         <input id="slider" type="checkbox">
         <span class="slider"></span>
@@ -32,7 +32,7 @@
 
   <div id="navbar-fixed" class="navbar-fixed">
     <div id="topnav" class="topnav">
-      <img id="topnav-toggle" onclick="hideSideNav()" class="desktop" src="./assets/icons/toggle.svg" alt="Toggle navbar">
+      <img id="topnav-toggle" onclick="hideSideNav()" class=" toggle desktop" src="./assets/icons/toggle.svg" alt="Toggle navbar">
       <img id="topnav-logo" src="./assets/icons/main-logo.svg" alt="YouTube logo">
     </div>
     <section class="first">
@@ -139,6 +139,12 @@
         </div>
       </div>
     </div>
+    <div class="control-group">
+      <p>Dolli Blair</p>
+      <div class="controls">
+        ab
+      </div>
+    </div>
     <div class="my-videos">
       <div class="video">
         <div class="video__thumbnail">
@@ -220,6 +226,186 @@
               <p class="views">80k views</p>
               <div class="dot"></div>
               <p class="published">12 hours ago</p>
+            </div>
+            <p class="owner">ibn_Abubakre</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="recommended">
+      <div class="group">
+        <p>Recommended</p>
+      </div>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover6.jpg" alt="video thumbnail">
+          <div>1:32</div>
+        </div>
+        <div>
+          <p class="video__name">Dude You're Getting A Telescope</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">34k views</p>
+              <div class="dot"></div>
+              <p class="published">5 months ago</p>
+            </div>
+            <p class="owner">Dollie Blair</p>
+          </div>
+        </div>
+      </div>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover7.jpg" alt="video thumbnail">
+          <div>1:32</div>
+        </div>
+        <div>
+          <p class="video__name">Moon Gazing</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">54k views</p>
+              <div class="dot"></div>
+              <p class="published">11 months ago</p>
+            </div>
+            <p class="owner">Dollie Blair</p>
+          </div>
+        </div>
+      </div>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover8.jpg" alt="video thumbnail">
+          <div>1:32</div>
+        </div>
+        <div>
+          <p class="video__name">Girls Like You</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">125k views</p>
+              <div class="dot"></div>
+              <p class="published">20 mins ago</p>
+            </div>
+            <p class="owner">Dollie Blair</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="food">
+      <div class="group">
+        <p>Food</p>
+      </div>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover5.jpg" alt="video thumbnail">
+          <div>1:32</div>
+        </div>
+        <div>
+          <p class="video__name">Moon Gazing</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">67k views</p>
+              <div class="dot"></div>
+              <p class="published">4 months ago</p>
+            </div>
+            <p class="owner">ibn_Abubakre</p>
+          </div>
+        </div>
+      </div>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover9.jpg" alt="video thumbnail">
+          <div>1:32</div>
+        </div>
+        <div>
+          <p class="video__name">Astronomy Or Astrology</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">250k views</p>
+              <div class="dot"></div>
+              <p class="published">4 month ago</p>
+            </div>
+            <p class="owner">ibn_Abubakre</p>
+          </div>
+        </div>
+      </div>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover10.jpg" alt="video thumbnail">
+          <div>1:32</div>
+        </div>
+        <div>
+          <p class="video__name">Advertising Outdoors</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">13k views</p>
+              <div class="dot"></div>
+              <p class="published">15 days ago</p>
+            </div>
+            <p class="owner">ibn_Abubakre</p>
+          </div>
+        </div>
+      </div>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover11.jpg" alt="video thumbnail">
+          <div>1:32</div>
+        </div>
+        <div>
+          <p class="video__name">Radio Astronomy</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">1k views</p>
+              <div class="dot"></div>
+              <p class="published">11 months ago</p>
+            </div>
+            <p class="owner">ibn_Abubakre</p>
+          </div>
+        </div>
+      </div>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover12.jpg" alt="video thumbnail">
+          <div>1:32</div>
+        </div>
+        <div>
+          <p class="video__name">A Good Autoresponder</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">45k views</p>
+              <div class="dot"></div>
+              <p class="published">2 months ago</p>
+            </div>
+            <p class="owner">ibn_Abubakre</p>
+          </div>
+        </div>
+      </div>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover13.jpg" alt="video thumbnail">
+          <div>1:32</div>
+        </div>
+        <div>
+          <p class="video__name">Baby Monitor Technology</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">86k views</p>
+              <div class="dot"></div>
+              <p class="published">7 days ago</p>
+            </div>
+            <p class="owner">ibn_Abubakre</p>
+          </div>
+        </div>
+      </div>
+      <div class="video">
+        <div class="video__thumbnail">
+          <img src="./assets/images/Cover15.jpg" alt="video thumbnail">
+          <div>1:32</div>
+        </div>
+        <div>
+          <p class="video__name">Asteroids</p>
+          <div class="video__details">
+            <div class="video__details__one">
+              <p class="views">123k views</p>
+              <div class="dot"></div>
+              <p class="published">4 month ago</p>
             </div>
             <p class="owner">ibn_Abubakre</p>
           </div>

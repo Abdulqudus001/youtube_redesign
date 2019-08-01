@@ -3,7 +3,6 @@
 @import "./components/slider.scss";
 
 
-
 body{
   font-family: 'Muli', sans-serif;
   background: $main;
@@ -20,6 +19,10 @@ p {
   margin: 0;
 }
 
+.toggle {
+  cursor: pointer;
+}
+
 .navbar {
   display: flex;
   position: fixed;
@@ -31,6 +34,7 @@ p {
   z-index: 1;
   background: #fff;
   top: 0;
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.4);
 
   @include mdl() {
     padding: 0 30px;
@@ -43,19 +47,6 @@ p {
       img.desktop {
         display: block;  
         margin-right: 40px;
-      }
-    }
-  }
-  .navbar_right {
-    flex: 0 0 20%;
-    padding: 0 10px;
-    .user-profile {
-      width: 30px;
-      height: 30px;
-      margin: 0 5px;
-      img {
-        width: 30px;
-        border-radius: 20px;
       }
     }
   }
@@ -74,6 +65,10 @@ p {
         display: block;
         width: 320px;
         margin: 0 10px;
+        max-width: 100%;
+        // @include xl() {
+        //   width: 450px;
+        // }
       }
 
       .mobile-search {
@@ -87,6 +82,27 @@ p {
     }
   }
 
+  .navbar_right {
+    // flex: 0 0 20%;
+    padding: 0 10px;
+
+    .desktop {
+      @include xl() {
+        display: block;
+        margin: 0 10px;
+      }
+    }
+    .user-profile {
+      width: 30px;
+      height: 30px;
+      margin: 0 5px;
+      img {
+        width: 30px;
+        border-radius: 20px;
+      }
+    }
+  }
+
 
   .search {
     border-radius: 22px;
@@ -96,10 +112,12 @@ p {
     background-image: linear-gradient(rgba($light_grey, 0.3),rgba($light_grey, 0.3)),url('../assets/icons/search.svg'); 
     background-repeat: no-repeat;
     background-position: 97%;
+    padding-right: 30px;
     outline: none;
     border: none;
     @include md() {
       padding: 10px;
+      padding-right: 30px;
     }
     &.dark {
       background-image: url('../assets/icons/white/search-white.svg');
@@ -179,6 +197,7 @@ p {
     font-size: 12px;
     align-items: center;
     height: 25px;
+    cursor: pointer;
     
     p {
       margin-top: 3px;
@@ -199,9 +218,10 @@ p {
 
 .side-nav {
   top: -10px;
+  z-index: 2;
   margin-top: 60px;
   width: 70px;
-  height: calc(100vh - 45px);
+  height: calc(100vh - 10px);
   background: #fff;
   border-right: 1px solid #f1f1f1;
   position: fixed;
@@ -221,9 +241,22 @@ p {
   }
 }
 
+.control-group {
+  display: none;
+  justify-content: space-between;
+  flex: 0 0 100%;
+  color: #000;
+  padding: 0 20px 0 75px;
+  font-size: 18px;
+  font-weight: bold;
+  @include xl() {
+    display: flex;
+  }
+}
+
 .videos {
   width: 960px;
-  max-width: calc(100% - 20px);
+  max-width: calc(100% - 80px);
   margin: 5px auto 65px;
   padding: 60px 10px 0;
   position: relative;
@@ -232,7 +265,35 @@ p {
     display: flex;
     flex-flow: row wrap;
     @include lg() {
-      padding-left: 55px;
+      padding-left: 65px;
+    }
+    @include xl() {
+      overflow-x: auto;
+      flex-flow: row nowrap;
+    }
+  }
+
+  .recommended, .food {
+    margin: 0 auto;
+    // width: 100%;
+    @include md() {
+      margin: unset;
+    }
+
+    @include lg() {
+      display: flex;
+      flex-flow: row wrap;
+      padding-left: 65px;
+    }
+    .group {
+      flex: 0 0 100%;
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 5px 0px;
+      @include md() {
+        padding: 5px 20px;
+      }
     }
   }
 
@@ -307,6 +368,7 @@ p {
 
       &__thumbnail {
         margin: 0 20px;
+        width: 250px;
       }
     }
 
@@ -316,9 +378,9 @@ p {
     }
 
     @include lg() {
-      width: 280px;
+      width: 250px;
       display: block;
-      margin: 10px;
+      margin: 10px 1px;
       padding: 0 10px;
       display: flex;
       flex-direction: column;
@@ -348,6 +410,7 @@ p {
     color: $text;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     img {
       width: 20px;
       height: 20px;
