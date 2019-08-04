@@ -27,11 +27,14 @@ let lib = document.querySelectorAll('.lib');
 let sub = document.querySelectorAll('.sub');
 let group = document.querySelectorAll('.group');
 let nrDesktop = document.querySelectorAll('.nr-desktop');
+let tagName = document.querySelectorAll('.tag-name');
+let iconRight = document.querySelectorAll('.right');
+let iconLeft = document.querySelectorAll('.left');
 
 const enableDarkMode = () => {
   dq('body').style.background = '#17171e';
   dq('#navbar').style.background = '#17171e';
-  dq('#navbar').style.boxShadow = '0 1px 7px 0 rgba(255, 255, 255, 0.4)'
+  // dq('#navbar').style.boxShadow = '0 1px 7px 0 rgba(255, 255, 255, 0.4)'
   dq('#footer').style.background = '#17171e';
   dq('#main-logo').src = whiteIcon['mainLogo'];
   trending.forEach(trend => {
@@ -48,6 +51,15 @@ const enableDarkMode = () => {
   });
   nrDesktop.forEach(icon => {
     icon.src = `./assets/icons/white/${icon.id}.svg`;
+  });
+  tagName.forEach(tag => {
+    tag.style.color = '#fff';
+  });
+  iconRight.forEach(right => {
+    right.src = './assets/icons/white/Right.svg'
+  });
+  iconLeft.forEach(left => {
+    left.src = './assets/icons/white/Left.svg'
   });
   dq('#mobile-search').src = './assets/icons/white/search-white.svg';
   videoName.forEach(video => {
@@ -77,7 +89,7 @@ const enableDarkMode = () => {
 const disableDarkMode = () => {
   dq('body').style.background = '#fff';
   dq('#navbar').style.background = '#fff';
-  dq('#navbar').style.background = '0 1px 7px 0 rgba(0, 0, 0, 0.4)'
+  // dq('#navbar').style.boxShadow = '0 1px 7px 0 rgba(0, 0, 0, 0.4)'
   dq('#footer').style.background = '#fff';
   dq('#main-logo').src = icon['mainLogo'];
   trending.forEach(trend => {

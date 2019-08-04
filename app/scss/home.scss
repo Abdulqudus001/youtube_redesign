@@ -34,7 +34,7 @@ p {
   z-index: 1;
   background: #fff;
   top: 0;
-  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.4);
+  // box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.4);
 
   @include mdl() {
     padding: 0 30px;
@@ -122,6 +122,7 @@ p {
     &.dark {
       background-image: url('../assets/icons/white/search-white.svg');
       background-color: rgba(255, 255, 255, 0.1);
+      color: rgba(#fff, 0.4);
       &::placeholder {
         color: rgba(#fff, 0.4);
       }
@@ -139,7 +140,6 @@ p {
   z-index: 2;
   overflow: auto;
   transition: 0.2s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
   .topnav {
     padding: 0 20px;
     display: none;
@@ -182,10 +182,10 @@ p {
       margin: 8px 0;
     }
 
-    &.first {
+    .first {
       margin-top: 70px;
     }
-    &.last {
+    .last {
       margin-bottom: 50px;
     }
   }
@@ -214,6 +214,21 @@ p {
     }
   }
 
+  @include xl () {
+    height: calc(100% - 55px);
+    width: 220px;
+    top: 55px;
+    .first {
+      margin-top: 10px 0;
+    }
+    .last {
+      margin-bottom: 10px 0;
+    }
+    .bottomNav {
+      display: flex;
+    }
+  }
+
 }
 
 .side-nav {
@@ -239,6 +254,10 @@ p {
   @include mdl() {
     display: flex;
   }
+
+  @include xl() {
+    display: none;
+  }
 }
 
 .control-group {
@@ -249,8 +268,24 @@ p {
   padding: 0 20px 0 75px;
   font-size: 18px;
   font-weight: bold;
+
+  div {
+    display: flex;
+    align-items: center;
+    img {
+      margin: 0 5px;
+    }
+  }
+
+  .hint {
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 15px;
+  }
+
   @include xl() {
     display: flex;
+    padding: 10px 75px 10px 10px;
   }
 }
 
@@ -270,6 +305,7 @@ p {
     @include xl() {
       overflow-x: auto;
       flex-flow: row nowrap;
+      padding-left: 0;
     }
   }
 
@@ -293,6 +329,11 @@ p {
       padding: 5px 0px;
       @include md() {
         padding: 5px 20px;
+      }
+
+      @include xl() {
+        padding: 5px 10px;
+        flex: 0 0 96.5%;
       }
     }
   }
@@ -387,6 +428,32 @@ p {
 
       &__thumbnail {
         margin: 0;
+      }
+    }
+  }
+
+  @include xl() {
+    width: 1260px;
+    margin: 0 0 0 220px;
+    max-width: calc(100% - 240px);
+    .food, .recommended {
+      flex-flow: row nowrap;
+      overflow-x: auto;
+      padding-left: 0;
+      .group {
+        display: none;
+      }
+    }
+
+    .recommended, .food {
+      .video {
+        width: fit-content;
+        &__thumbnail {
+          width: auto;
+        }
+      }
+      img {
+        width: auto;
       }
     }
   }
