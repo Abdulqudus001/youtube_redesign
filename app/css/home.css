@@ -195,6 +195,8 @@ p {
         margin-top: 10px 0; }
       .navbar-fixed .last {
         margin-bottom: 10px 0; }
+      .navbar-fixed .topnav {
+        display: none !important; }
       .navbar-fixed .bottomNav {
         display: flex; } }
 
@@ -259,7 +261,7 @@ p {
         padding-left: 65px; } }
     @media screen and (min-width: 992px) {
       .videos .my-videos {
-        overflow-x: auto;
+        overflow-x: hidden;
         flex-flow: row nowrap;
         padding-left: 0; } }
   .videos .recommended, .videos .food {
@@ -362,7 +364,7 @@ p {
       max-width: calc(100% - 240px); }
       .videos .food, .videos .recommended {
         flex-flow: row nowrap;
-        overflow-x: auto;
+        overflow-x: hidden;
         padding-left: 0; }
         .videos .food .group, .videos .recommended .group {
           display: none; }
