@@ -145,11 +145,11 @@
         <p class="tag-name">Dolli Blair</p>
       </div>
       <div class="controls">
-        <img class="left" src="./assets/icons/Left.svg" alt="Scroll Left">
-        <img class="right" src="./assets/icons/Right.svg" alt="Scroll Right">
+        <img onclick="moveLeft('#my-videos')" class="left" src="./assets/icons/Left.svg" alt="Scroll Left">
+        <img onclick="moveRight('#my-videos')" class="right" src="./assets/icons/Right.svg" alt="Scroll Right">
       </div>
     </div>
-    <div class="my-videos">
+    <div id="my-videos" class="my-videos">
       <div class="video">
         <div class="video__thumbnail">
           <img src="./assets/images/Cover.jpg" alt="video thumbnail">
@@ -239,11 +239,11 @@
     <div class="control-group">
       <p class="tag-name">Recommended</p>
       <div class="controls">
-        <img class="left" src="./assets/icons/Left.svg" alt="Scroll Left">
-        <img class="right" src="./assets/icons/Right.svg" alt="Scroll Right">
+        <img onclick="moveLeft('#recommended')" class="left" src="./assets/icons/Left.svg" alt="Scroll Left">
+        <img onclick="moveRight('#recommended')" class="right" src="./assets/icons/Right.svg" alt="Scroll Right">
       </div>
     </div>
-    <div class="recommended">
+    <div id="recommended" class="recommended">
       <div class="group">
         <p>Recommended</p>
       </div>
@@ -306,11 +306,11 @@
         <p class="hint tag-name">Recommended channel for you</p>
       </div>
       <div class="controls">
-        <img class="left" src="./assets/icons/Left.svg" alt="Scroll Left">
-        <img class="right" src="./assets/icons/Right.svg" alt="Scroll Right">
+        <img onclick="moveLeft('#food')" class="left" src="./assets/icons/Left.svg" alt="Scroll Left">
+        <img onclick="moveRight('#food')" class="right" src="./assets/icons/Right.svg" alt="Scroll Right">
       </div>
     </div>
-    <div class="food">
+    <div id="food" class="food">
       <div class="group">
         <p>Food</p>
       </div>
@@ -456,5 +456,10 @@
   </div>
   <script src="./scripts/index.js"></script>
   <script src="./scripts/theme.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script src="./scripts/scroll.js"></script>
 </body>
 </html>

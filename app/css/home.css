@@ -251,6 +251,7 @@ p {
   padding: 60px 10px 0;
   position: relative; }
   .videos .my-videos {
+    position: relative;
     display: flex;
     flex-flow: row wrap; }
     @media screen and (min-width: 750px) {

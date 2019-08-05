@@ -297,6 +297,7 @@ p {
   position: relative;
 
   .my-videos {
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     @include lg() {
