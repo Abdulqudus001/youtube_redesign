@@ -98,3 +98,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center; } }
+
+@media screen and (min-width: 992px) {
+  .user_banner {
+    width: calc(100vw - 260px);
+    left: -60px; }
+    .user_banner > img {
+      border-radius: 14px;
+      height: 280px; }
+    .user_banner__details {
+      align-items: flex-end;
+      padding: 0; }
+      .user_banner__details .subscribe {
+        margin-right: 0; }
+      .user_banner__details__name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        top: 0;
+        left: 0; }
+        .user_banner__details__name img {
+          margin-right: 10px; } }

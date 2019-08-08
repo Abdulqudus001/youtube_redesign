@@ -124,3 +124,32 @@
     }
   }
 }
+
+@include xl() {
+  .user_banner {
+    width: calc(100vw - 260px);
+    left: -60px;
+    > img {
+      border-radius: 14px;
+      height: 280px
+    }
+
+    &__details {
+      align-items: flex-end;
+      padding: 0;
+      .subscribe {
+        margin-right: 0;
+      }
+      &__name {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        top: 0;
+        left: 0;
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
