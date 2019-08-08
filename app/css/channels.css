@@ -1,6 +1,6 @@
 .desktop_logo {
   display: none; }
-  @media screen and (min-width: 650px) {
+  @media screen and (min-width: 600px) {
     .desktop_logo {
       display: block; } }
 
@@ -13,7 +13,7 @@
   font-weight: bold; }
   .channel_logo p {
     margin-left: 5px; }
-  @media screen and (min-width: 650px) {
+  @media screen and (min-width: 600px) {
     .channel_logo {
       display: none; } }
 
@@ -86,3 +86,15 @@
     .tab__items li:hover {
       color: red;
       border-bottom: 2px solid red; }
+
+@media screen and (min-width: 600px) {
+  .channel {
+    width: calc(100% - 70px);
+    position: relative;
+    left: 70px; }
+  .user_banner {
+    width: calc(100vw - 70px); }
+    .user_banner__details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; } }

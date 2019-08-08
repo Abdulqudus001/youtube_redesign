@@ -3,7 +3,7 @@
 
 .desktop_logo {
   display: none;
-  @include mdl () {
+  @include md () {
     display: block;
   }
 }
@@ -18,7 +18,7 @@
   p {
     margin-left: 5px;
   }
-  @include mdl () {
+  @include md () {
     display: none;
   }
 }
@@ -104,6 +104,23 @@
     &:hover {
       color: red;
       border-bottom: 2px solid red;
+    }
+  }
+}
+
+@include md() {
+  .channel {
+    width: calc(100% - 70px);
+    position: relative;
+    left: 70px;
+  }
+
+  .user_banner {
+    width: calc(100vw - 70px);
+    &__details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 }
