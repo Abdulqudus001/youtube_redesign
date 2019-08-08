@@ -87,6 +87,9 @@ const enableDarkMode = () => {
   // Change channels page theme
   dq('.channel_logo').style.color = '#fff';
   dq('.v_toggle').src = './assets/icons/white/toggle-vertical.svg';
+  dq('.subscribers__name').style.color = '#fff';
+  dq('.tab__items').style.color = '#fff';
+  dq('.tab__items__action img').src = './assets/icons/white/arrow-down.svg';
 };
 
 const disableDarkMode = () => {
@@ -135,5 +138,8 @@ const disableDarkMode = () => {
   dq('#sidenav').style.background = '#fff';
   // Change channels page theme
   dq('.channel_logo').style.color = '#000';
-  dq('.v_toggle').src = '/assets/icons/toggle-vertical.svg';
+  dq('.v_toggle').src = './assets/icons/toggle-vertical.svg';
+  dq('.subscribers__name').style.color = '#19202c';
+  dq('.tab__items').style.color = '#000';
+  dq('.tab__items__action img').src = './assets/icons/arrow-down.svg';
 };

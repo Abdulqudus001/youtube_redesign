@@ -35,6 +35,54 @@
   width: 100vw; }
   .user_banner img {
     width: 100%; }
-  .user_banner__details img {
-    width: 70px;
-    height: 70px; }
+  .user_banner__details {
+    position: relative;
+    padding: 0 35px; }
+    .user_banner__details__name {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: -35px; }
+      .user_banner__details__name img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%; }
+    .user_banner__details .subscribe {
+      width: 154px;
+      height: 40px;
+      background: #f04732;
+      border-radius: 20px;
+      outline: none;
+      border: none;
+      color: #fff;
+      margin-right: 15px;
+      position: relative;
+      top: -15px; }
+
+.subscribers__name {
+  color: #19202c;
+  font-size: 20px;
+  font-weight: bold; }
+
+.subscribers__num {
+  color: #c2c2c2;
+  font-size: 12px; }
+
+.tab__items {
+  list-style-type: none;
+  display: flex;
+  color: #000;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0; }
+  .tab__items__action {
+    text-align: right; }
+  .tab__items__1 {
+    color: red;
+    border-bottom: 2px solid red; }
+  .tab__items li {
+    font-size: 14px;
+    padding: 0 10px 7px; }
+    .tab__items li:hover {
+      color: red;
+      border-bottom: 2px solid red; }
