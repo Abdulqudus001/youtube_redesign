@@ -9,13 +9,18 @@
   <link rel="stylesheet" href="./css/home.css">
   <link rel="stylesheet" href="./css/components/navbar.css">
   <link rel="stylesheet" href="./css/components/fixedNavbar.css">
+  <link rel="stylesheet" href="./css/channels.css">
 </head>
 <body>
   <div class="navbar" id="navbar">
     <div class="navbar_left">
       <img onclick="showSideNav('left')" class="toggle desktop" id="toggle" src="./assets/icons/toggle.svg" alt="Toggle navbar">
-      <a href="./index.html">
+      <a class="desktop_logo" href="./index.html">
         <img id="main-logo" src="./assets/icons/main-logo.svg" alt="YouTube logo">
+      </a>
+      <a id="channel_logo" class="channel_logo" href="./index.html">
+        <img src="./assets/icons/Logo.svg" alt="YouTube logo">
+        <p>ibn_Abubakre</p>
       </a>
       <input type="text" name="search" id="search" placeholder="Search" class="search desktop">
     </div>
@@ -35,7 +40,8 @@
         <a href="./channel.html">
           <img src="./assets/images/user-profile.jpg" alt="Profile image">
         </a>
-      </div>    
+      </div>   
+      <img class="v_toggle" src="./assets/icons/toggle-vertical.svg" alt="Toggle_icon">
     </div>
   </div>
 
@@ -148,182 +154,24 @@
         </div>
       </div>
     </div>
-    <div class="control-group">
-      <div>
-        <img src="./assets/images/author-image.png" alt="Uploaded By">
-        <p class="tag-name">Dolli Blair</p>
-      </div>
-      <div class="controls">
-        <img onclick="moveLeft('#my-videos')" class="left" src="./assets/icons/Left.svg" alt="Scroll Left">
-        <img onclick="moveRight('#my-videos')" class="right" src="./assets/icons/Right.svg" alt="Scroll Right">
-      </div>
-    </div>
-    <div id="my-videos" class="my-videos">
-      <div class="video">
-        <div class="video__thumbnail">
-          <img src="./assets/images/Cover.jpg" alt="video thumbnail">
-          <div>4:15</div>
-        </div>
-        <div>
-          <p class="video__name">A Brief History Of Creation</p>
-          <div class="video__details">
-            <div class="video__details__one">
-              <p class="views">80k views</p>
-              <div class="dot"></div>
-              <p class="published">3 days ago</p>
-            </div>
-            <p class="owner">Dollie Blair</p>
-          </div>
-        </div>
-      </div>
-      <div class="video">
-        <div class="video__thumbnail">
-          <img src="./assets/images/Cover1.jpg" alt="video thumbnail">
-          <div>8:00</div>
-        </div>
-        <div>
-          <p class="video__name">Selecting The Right Hotel</p>
-          <div class="video__details">
-            <div class="video__details__one">
-              <p class="views">123k views</p>
-              <div class="dot"></div>
-              <p class="published">1 months ago</p>
-            </div>
-            <p class="owner">Dollie Blair</p>
-          </div>
-        </div>
-      </div>
-      <div class="video">
-        <div class="video__thumbnail">
-          <img src="./assets/images/Cover2.jpg" alt="video thumbnail">
-          <div>5:32</div>
-        </div>
-        <div>
-          <p class="video__name">Asteroids</p>
-          <div class="video__details">
-            <div class="video__details__one">
-              <p class="views">43k views</p>
-              <div class="dot"></div>
-              <p class="published">12 days ago</p>
-            </div>
-            <p class="owner">Dollie Blair</p>
-          </div>
-        </div>
-      </div>
-      <div class="video">
-        <div class="video__thumbnail">
-          <img src="./assets/images/Cover3.jpg" alt="video thumbnail">
-          <div>6:40</div>
-        </div>
-        <div>
-          <p class="video__name">Telescopes 101</p>
-          <div class="video__details">
-            <div class="video__details__one">
-              <p class="views">11k views</p>
-              <div class="dot"></div>
-              <p class="published">3 months ago</p>
-            </div>
-            <p class="owner">Dollie Blair</p>
-          </div>
-        </div>
-      </div>
-      <div class="video">
-        <div class="video__thumbnail">
-          <img src="./assets/images/Cover4.jpg" alt="video thumbnail">
-          <div>1:32</div>
-        </div>
-        <div>
-          <p class="video__name">Intro to Javascript</p>
-          <div class="video__details">
-            <div class="video__details__one">
-              <p class="views">80k views</p>
-              <div class="dot"></div>
-              <p class="published">12 hours ago</p>
-            </div>
-            <p class="owner">ibn_Abubakre</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="control-group">
-      <p class="tag-name">Recommended</p>
-      <div class="controls">
-        <img onclick="moveLeft('#recommended')" class="left" src="./assets/icons/Left.svg" alt="Scroll Left">
-        <img onclick="moveRight('#recommended')" class="right" src="./assets/icons/Right.svg" alt="Scroll Right">
-      </div>
-    </div>
-    <div id="recommended" class="recommended">
-      <div class="group">
-        <p>Recommended</p>
-      </div>
-      <div class="video">
-        <div class="video__thumbnail">
-          <img src="./assets/images/Cover6.jpg" alt="video thumbnail">
-          <div>1:32</div>
-        </div>
-        <div>
-          <p class="video__name">Dude You're Getting A Telescope</p>
-          <div class="video__details">
-            <div class="video__details__one">
-              <p class="views">34k views</p>
-              <div class="dot"></div>
-              <p class="published">5 months ago</p>
-            </div>
-            <p class="owner">Dollie Blair</p>
-          </div>
-        </div>
-      </div>
-      <div class="video">
-        <div class="video__thumbnail">
-          <img src="./assets/images/Cover7.jpg" alt="video thumbnail">
-          <div>1:32</div>
-        </div>
-        <div>
-          <p class="video__name">Moon Gazing</p>
-          <div class="video__details">
-            <div class="video__details__one">
-              <p class="views">54k views</p>
-              <div class="dot"></div>
-              <p class="published">11 months ago</p>
-            </div>
-            <p class="owner">Dollie Blair</p>
-          </div>
-        </div>
-      </div>
-      <div class="video">
-        <div class="video__thumbnail">
-          <img src="./assets/images/Cover8.jpg" alt="video thumbnail">
-          <div>1:32</div>
-        </div>
-        <div>
-          <p class="video__name">Girls Like You</p>
-          <div class="video__details">
-            <div class="video__details__one">
-              <p class="views">125k views</p>
-              <div class="dot"></div>
-              <p class="published">20 mins ago</p>
-            </div>
-            <p class="owner">Dollie Blair</p>
-          </div>
+    <div class="channel">
+      <div class="user_banner mobile">
+        <img src="./assets/images/channels/Cover_mobile.jpg" alt="">
+        <div class="user_banner__details">
+          <img src="./assets/images/channels/users/Oval 1.jpg" alt="">
         </div>
       </div>
     </div>
     <div class="control-group">
       <div class="control-group__tag">
-        <img src="./assets/images/food.png" alt="Uploaded By">
-        <p class="tag-name">Food & Drink</p>
-        <p class="hint tag-name">Recommended channel for you</p>
+        <p class="tag-name">ibn_Abubakre's Videos</p>
       </div>
       <div class="controls">
-        <button>Subscribe 2.3m</button>
         <img onclick="moveLeft('#food')" class="left" src="./assets/icons/Left.svg" alt="Scroll Left">
         <img onclick="moveRight('#food')" class="right" src="./assets/icons/Right.svg" alt="Scroll Right">
       </div>
     </div>
     <div id="food" class="food">
-      <div class="group">
-        <p>Food</p>
-      </div>
       <div class="video">
         <div class="video__thumbnail">
           <img src="./assets/images/Cover5.jpg" alt="video thumbnail">

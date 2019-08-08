@@ -1,0 +1,40 @@
+.desktop_logo {
+  display: none; }
+  @media screen and (min-width: 650px) {
+    .desktop_logo {
+      display: block; } }
+
+.channel_logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold; }
+  .channel_logo p {
+    margin-left: 5px; }
+  @media screen and (min-width: 650px) {
+    .channel_logo {
+      display: none; } }
+
+.user-profile {
+  display: none; }
+  @media screen and (min-width: 992px) {
+    .user-profile {
+      display: block; } }
+
+.v_toggle {
+  margin-left: 10px; }
+  @media screen and (min-width: 992px) {
+    .v_toggle {
+      display: none; } }
+
+.user_banner {
+  position: relative;
+  left: -40px;
+  width: 100vw; }
+  .user_banner img {
+    width: 100%; }
+  .user_banner__details img {
+    width: 70px;
+    height: 70px; }

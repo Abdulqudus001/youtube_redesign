@@ -1,4 +1,4 @@
-const dq = (e) => document.querySelector(e);
+const dq = e => document.querySelector(e);
 const slider = dq('#slider');
 const whiteIcon = {
   mainLogo: './assets/icons/white/main-logo-white.svg',
@@ -6,7 +6,7 @@ const whiteIcon = {
   library: './assets/icons/white/library.svg',
   subscriptions: './assets/icons/white/subscriptions.svg',
   toggle: './assets/icons/white/toggle-white.svg'
-}
+};
 
 const icon = {
   mainLogo: './assets/icons/main-logo.svg',
@@ -14,7 +14,7 @@ const icon = {
   library: './assets/icons/library.svg',
   subscriptions: './assets/icons/subscriptions.svg',
   toggle: './assets/icons/toggle.svg'
-}
+};
 
 slider.addEventListener('change', e => {
   if (e.target.checked) enableDarkMode();
@@ -56,10 +56,10 @@ const enableDarkMode = () => {
     tag.style.color = '#fff';
   });
   iconRight.forEach(right => {
-    right.src = './assets/icons/white/Right.svg'
+    right.src = './assets/icons/white/Right.svg';
   });
   iconLeft.forEach(left => {
-    left.src = './assets/icons/white/Left.svg'
+    left.src = './assets/icons/white/Left.svg';
   });
   dq('#mobile-search').src = './assets/icons/white/search-white.svg';
   videoName.forEach(video => {
@@ -84,7 +84,10 @@ const enableDarkMode = () => {
   dq('#toggle').src = whiteIcon['toggle'];
   dq('#search').classList.add('dark');
   dq('#sidenav').style.background = '#17171e';
-}
+  // Change channels page theme
+  dq('.channel_logo').style.color = '#fff';
+  dq('.v_toggle').src = './assets/icons/white/toggle-vertical.svg';
+};
 
 const disableDarkMode = () => {
   dq('body').style.background = '#fff';
@@ -109,7 +112,7 @@ const disableDarkMode = () => {
     group.style.color = '#000';
   });
   nrDesktop.forEach(icon => {
-    icon.src = `./assets/icons/${icon.id}.svg`
+    icon.src = `./assets/icons/${icon.id}.svg`;
   });
   dq('#navbar-fixed').style.background = '#fff';
   dq('#topnav').style.background = '#fff';
@@ -130,4 +133,7 @@ const disableDarkMode = () => {
   dq('#toggle').src = icon['toggle'];
   dq('#search').classList.remove('dark');
   dq('#sidenav').style.background = '#fff';
-}
+  // Change channels page theme
+  dq('.channel_logo').style.color = '#000';
+  dq('.v_toggle').src = '/assets/icons/toggle-vertical.svg';
+};

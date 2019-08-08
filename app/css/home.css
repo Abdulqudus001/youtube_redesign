@@ -53,7 +53,7 @@ p {
 
 .side-nav {
   top: -10px;
-  z-index: 2;
+  z-index: 1;
   margin-top: 60px;
   width: 70px;
   height: calc(100vh - 10px);

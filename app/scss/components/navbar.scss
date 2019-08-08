@@ -84,7 +84,7 @@
     width: 500px;
     max-width: 100%;
     padding: 15px;
-    background-image: linear-gradient(rgba($light_grey, 0.3),rgba($light_grey, 0.3)),url('../assets/icons/search.svg'); 
+    background-image: linear-gradient(rgba($light_grey, 0.3),rgba($light_grey, 0.3)),url('../../assets/icons/search.svg'); 
     background-repeat: no-repeat;
     background-position: 97%;
     padding-right: 30px;
@@ -95,7 +95,7 @@
       padding-right: 30px;
     }
     &.dark {
-      background-image: url('../assets/icons/white/search-white.svg');
+      background-image: url('../../assets/icons/white/search-white.svg');
       background-color: rgba(255, 255, 255, 0.1);
       color: rgba(#fff, 0.4);
       &::placeholder {

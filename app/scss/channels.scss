@@ -1,0 +1,52 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+
+.desktop_logo {
+  display: none;
+  @include mdl () {
+    display: block;
+  }
+}
+
+.channel_logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  p {
+    margin-left: 5px;
+  }
+  @include mdl () {
+    display: none;
+  }
+}
+
+.user-profile {
+  display: none;
+  @include xl() {
+    display: block;
+  }
+}
+.v_toggle {
+  margin-left: 10px;
+  @include xl () {
+    display: none;
+  }
+}
+
+.user_banner {
+  position: relative;
+  left: -40px;
+  width: 100vw;
+  img {
+    width: 100%;
+  }
+  &__details {
+    img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
