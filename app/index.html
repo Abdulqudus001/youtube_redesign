@@ -7,6 +7,7 @@
   <title>YouTube | Home</title>
   <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/components/navbar.css">
 </head>
 <body>
   <div class="navbar" id="navbar">
@@ -18,7 +19,10 @@
     <div class="navbar_right">
       <img id="camcorder" class="nr-desktop desktop" src="./assets/icons/camcorder.svg" alt="">
       <img id="grid" class="nr-desktop desktop" src="./assets/icons/grid.svg" alt="Change view">
-      <img id="notification" class="nr-desktop desktop" src="./assets/icons/notification.svg" alt="">
+      <div class="notification">
+        <img id="notification" class="nr-desktop desktop" src="./assets/icons/notification.svg" alt="">
+        <div class="notification__badge">4</div>
+      </div>
       <label class="switch">
         <input id="slider" type="checkbox">
         <span class="slider"></span>
@@ -118,7 +122,7 @@
     </div>
   </div>
 
-  <div class="videos">
+  <div id="videos" class="videos">
     <div id="sidenav" class="side-nav">
       <div>
         <div class="footer__item">
