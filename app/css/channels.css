@@ -75,6 +75,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 0; }
+  @media screen and (min-width: 992px) {
+    .tab__items.mobile {
+      display: none; } }
   .tab__items__action {
     text-align: right; }
   .tab__items__1 {
@@ -86,6 +89,59 @@
     .tab__items li:hover {
       color: red;
       border-bottom: 2px solid red; }
+
+.channel__body {
+  display: none; }
+  @media screen and (min-width: 992px) {
+    .channel__body {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      width: calc(100vw - 260px);
+      left: -60px;
+      color: #000; }
+      .channel__body .tabs {
+        flex: 0 0 70%; }
+        .channel__body .tabs .main_video {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          .channel__body .tabs .main_video__thumbnail {
+            flex: 0 0 57%; }
+            .channel__body .tabs .main_video__thumbnail img {
+              width: 100%;
+              border-radius: 14px; }
+          .channel__body .tabs .main_video__about {
+            flex: 0 0 40%; }
+            .channel__body .tabs .main_video__about .title {
+              color: #000;
+              font-weight: bold;
+              font-size: 18px; }
+            .channel__body .tabs .main_video__about .subtitle {
+              font-size: 14px;
+              color: #000;
+              opacity: 0.6; }
+            .channel__body .tabs .main_video__about .plain {
+              opacity: 0.4;
+              font-size: 14px; }
+      .channel__body .channel__list {
+        padding-bottom: 5px;
+        margin-top: 1.3em;
+        margin-right: 10px;
+        font-size: 14px; }
+        .channel__body .channel__list .title {
+          color: #c2c2c2; }
+        .channel__body .channel__list__items .item {
+          display: flex;
+          align-items: center;
+          color: #000;
+          font-weight: bold;
+          margin: 20px 0; }
+          .channel__body .channel__list__items .item img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px; } }
 
 @media screen and (min-width: 600px) {
   .channel {

@@ -30,6 +30,8 @@ let nrDesktop = document.querySelectorAll('.nr-desktop');
 let tagName = document.querySelectorAll('.tag-name');
 let iconRight = document.querySelectorAll('.right');
 let iconLeft = document.querySelectorAll('.left');
+let tabItems = document.querySelectorAll('.tab__items');
+let channelItems = document.querySelectorAll('.item');
 
 const enableDarkMode = () => {
   dq('body').style.background = '#17171e';
@@ -88,8 +90,18 @@ const enableDarkMode = () => {
   dq('.channel_logo').style.color = '#fff';
   dq('.v_toggle').src = './assets/icons/white/toggle-vertical.svg';
   dq('.subscribers__name').style.color = '#fff';
-  dq('.tab__items').style.color = '#fff';
+  tabItems.forEach(tab => {
+    tab.style.color = '#fff';
+  });
   dq('.tab__items__action img').src = './assets/icons/white/arrow-down.svg';
+  dq('.tab__items__action.desktop img').src =
+    './assets/icons/white/search-white.svg';
+  dq('.main_video__about .title').style.color = '#fff';
+  dq('.main_video__about .subtitle').style.color = '#fff';
+  dq('.main_video__about .plain').style.color = '#fff';
+  channelItems.forEach(item => {
+    item.style.color = '#fff';
+  });
 };
 
 const disableDarkMode = () => {
@@ -140,6 +152,15 @@ const disableDarkMode = () => {
   dq('.channel_logo').style.color = '#000';
   dq('.v_toggle').src = './assets/icons/toggle-vertical.svg';
   dq('.subscribers__name').style.color = '#19202c';
-  dq('.tab__items').style.color = '#000';
+  tabItems.forEach(tab => {
+    tab.style.color = '#000';
+  });
   dq('.tab__items__action img').src = './assets/icons/arrow-down.svg';
+  dq('.tab__items__action.desktop img').src = './assets/icons/search.svg';
+  dq('.main_video__about .title').style.color = '#000';
+  dq('.main_video__about .subtitle').style.color = '#000';
+  dq('.main_video__about .plain').style.color = '#000';
+  channelItems.forEach(item => {
+    item.style.color = '#000';
+  });
 };
