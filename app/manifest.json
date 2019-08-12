@@ -2,7 +2,7 @@
   "name": "YouTube_Clone",
   "short_name": "YouTube_Clone",
   "display": "minimal-ui",
-  "start_url": "/",
+  "start_url": "./index.html",
   "icons": [
       {
           "src": "./android-chrome-192x192.png",
