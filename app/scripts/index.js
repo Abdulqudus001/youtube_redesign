@@ -1,4 +1,4 @@
-console.log(publicKey);
+// console.log(publicKey);
 // Register service worker
 navigator.serviceWorker &&
   navigator.serviceWorker.register('./service-worker.js').then(registration => {
