@@ -1,3 +1,11 @@
+// Register service worker
+navigator.serviceWorker &&
+  navigator.serviceWorker
+    .register('../service-worker.js')
+    .then(registration => {
+      console.log('Registerd successfully');
+    });
+
 const toggle = document.querySelector('#toggle');
 const fixedNavbar = document.querySelector('#navbar-fixed');
 const topNav = document.querySelector('#topnav');
