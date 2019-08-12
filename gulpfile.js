@@ -14,7 +14,7 @@ gulp.task('watch', () => {
 
 gulp.task('generate-service-worker', function(callback) {
   var swPrecache = require('sw-precache');
-  var rootDir = 'app';
+  var rootDir = './app';
 
   swPrecache.write(
     `${rootDir}/service-worker.js`,
