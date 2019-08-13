@@ -1,7 +1,7 @@
 {
   "name": "YouTube_Clone",
   "short_name": "YouTube_Clone",
-  "display": "minimal-ui",
+  "display": "standalone",
   "start_url": "./index.html",
   "icons": [
       {
